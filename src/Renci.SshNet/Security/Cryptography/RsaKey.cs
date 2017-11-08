@@ -217,7 +217,6 @@ namespace Renci.SshNet.Security
         public void Dispose()
         {
             Dispose(true);
-            GC.SuppressFinalize(this);
         }
 
         /// <summary>
@@ -240,15 +239,6 @@ namespace Renci.SshNet.Security
 
                 _isDisposed = true;
             }
-        }
-
-        /// <summary>
-        /// Releases unmanaged resources and performs other cleanup operations before the
-        /// <see cref="RsaKey"/> is reclaimed by garbage collection.
-        /// </summary>
-        ~RsaKey()
-        {
-            Dispose(false);
         }
 
         #endregion

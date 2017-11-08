@@ -833,7 +833,6 @@ namespace Renci.SshNet.Channels
         public void Dispose()
         {
             Dispose(true);
-            GC.SuppressFinalize(this);
         }
 
         /// <summary>
@@ -888,15 +887,6 @@ namespace Renci.SshNet.Channels
 
                 _isDisposed = true;
             }
-        }
-
-        /// <summary>
-        /// Releases unmanaged resources and performs other cleanup operations before the
-        /// <see cref="Channel"/> is reclaimed by garbage collection.
-        /// </summary>
-        ~Channel()
-        {
-            Dispose(false);
         }
 
         #endregion // IDisposable Members

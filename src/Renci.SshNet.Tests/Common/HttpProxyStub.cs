@@ -52,7 +52,6 @@ namespace Renci.SshNet.Tests.Common
         public void Dispose()
         {
             Stop();
-            GC.SuppressFinalize(this);
         }
 
         private void OnBytesReceived(byte[] bytesReceived, Socket socket)

@@ -481,7 +481,6 @@ namespace Renci.SshNet
         public void Dispose()
         {
             Dispose(true);
-            GC.SuppressFinalize(this);
         }
 
         /// <summary>
@@ -524,13 +523,6 @@ namespace Renci.SshNet
             }
         }
 
-        /// <summary>
-        /// Finalizes an instance of the <see cref="SubsystemSession" /> class.
-        /// </summary>
-        ~SubsystemSession()
-        {
-            Dispose(false);
-        }
 
         private void EnsureNotDisposed()
         {

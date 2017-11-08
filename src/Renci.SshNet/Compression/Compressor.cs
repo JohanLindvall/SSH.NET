@@ -137,7 +137,6 @@ namespace Renci.SshNet.Compression
         public void Dispose()
         {
             Dispose(true);
-            GC.SuppressFinalize(this);
         }
 
         /// <summary>
@@ -167,15 +166,6 @@ namespace Renci.SshNet.Compression
 
                 _isDisposed = true;
             }
-        }
-
-        /// <summary>
-        /// Releases unmanaged resources and performs other cleanup operations before the <see cref="Compressor"/> is reclaimed
-        /// by garbage collection.
-        /// </summary>
-        ~Compressor()
-        {
-            Dispose(false);
         }
 
         #endregion

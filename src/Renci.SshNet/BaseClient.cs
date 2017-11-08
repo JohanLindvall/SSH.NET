@@ -334,7 +334,6 @@ namespace Renci.SshNet
             DiagnosticAbstraction.Log("Disposing client.");
 
             Dispose(true);
-            GC.SuppressFinalize(this);
         }
 
         /// <summary>
@@ -370,15 +369,6 @@ namespace Renci.SshNet
         {
             if (_isDisposed)
                 throw new ObjectDisposedException(GetType().FullName);
-        }
-
-        /// <summary>
-        /// Releases unmanaged resources and performs other cleanup operations before the
-        /// <see cref="BaseClient"/> is reclaimed by garbage collection.
-        /// </summary>
-        ~BaseClient()
-        {
-            Dispose(false);
         }
 
         #endregion

@@ -204,20 +204,11 @@ namespace Renci.SshNet.Common
         }
 
         /// <summary>
-        /// Finalizes the current <see cref="SemaphoreLight"/>.
-        /// </summary>
-        ~SemaphoreLight()
-        {
-            Dispose(false);
-        }
-
-        /// <summary>
         /// Performs application-defined tasks associated with freeing, releasing, or resetting unmanaged resources.
         /// </summary>
         public void Dispose()
         {
             Dispose(true);
-            GC.SuppressFinalize(this);
         }
 
         /// <summary>

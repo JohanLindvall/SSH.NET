@@ -129,7 +129,6 @@ namespace Renci.SshNet
         public void Dispose()
         {
             Dispose(true);
-            GC.SuppressFinalize(this);
         }
 
         partial void InternalDispose(bool disposing);
@@ -147,15 +146,6 @@ namespace Renci.SshNet
             InternalDispose(disposing);
 
             _isDisposed = true;
-        }
-
-        /// <summary>
-        /// Releases unmanaged resources and performs other cleanup operations before the
-        /// <see cref="ForwardedPortDynamic"/> is reclaimed by garbage collection.
-        /// </summary>
-        ~ForwardedPortDynamic()
-        {
-            Dispose(false);
         }
 
         #endregion

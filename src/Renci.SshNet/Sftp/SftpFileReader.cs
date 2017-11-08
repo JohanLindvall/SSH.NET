@@ -190,15 +190,9 @@ namespace Renci.SshNet.Sftp
             return read;
         }
 
-        ~SftpFileReader()
-        {
-            Dispose(false);
-        }
-
         public void Dispose()
         {
             Dispose(true);
-            GC.SuppressFinalize(this);
         }
 
         /// <summary>

@@ -159,7 +159,6 @@ namespace Renci.SshNet
         public void Dispose()
         {
             Dispose(true);
-            GC.SuppressFinalize(this);
         }
 
         /// <summary>
@@ -187,15 +186,6 @@ namespace Renci.SshNet
 
                 _isDisposed = true;
             }
-        }
-
-        /// <summary>
-        /// Releases unmanaged resources and performs other cleanup operations before the
-        /// <see cref="KeyboardInteractiveConnectionInfo"/> is reclaimed by garbage collection.
-        /// </summary>
-        ~KeyboardInteractiveConnectionInfo()
-        {
-            Dispose(false);
         }
 
         #endregion

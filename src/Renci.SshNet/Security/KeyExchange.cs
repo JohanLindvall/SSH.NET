@@ -482,7 +482,6 @@ namespace Renci.SshNet.Security
         public void Dispose()
         {
             Dispose(true);
-            GC.SuppressFinalize(this);
         }
 
         /// <summary>
@@ -491,15 +490,6 @@ namespace Renci.SshNet.Security
         /// <param name="disposing"><c>true</c> to release both managed and unmanaged resources; <c>false</c> to release only unmanaged resources.</param>
         protected virtual void Dispose(bool disposing)
         {
-        }
-
-        /// <summary>
-        /// Releases unmanaged resources and performs other cleanup operations before the
-        /// <see cref="KeyExchange"/> is reclaimed by garbage collection.
-        /// </summary>
-        ~KeyExchange()
-        {
-            Dispose(false);
         }
 
         #endregion

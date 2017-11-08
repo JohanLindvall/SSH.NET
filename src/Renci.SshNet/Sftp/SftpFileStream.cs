@@ -268,15 +268,6 @@ namespace Renci.SshNet.Sftp
         }
 
         /// <summary>
-        /// Releases unmanaged resources and performs other cleanup operations before the
-        /// <see cref="SftpFileStream"/> is reclaimed by garbage collection.
-        /// </summary>
-        ~SftpFileStream()
-        {
-            Dispose(false);
-        }
-
-        /// <summary>
         /// Clears all buffers for this stream and causes any buffered data to be written to the file.
         /// </summary>
         /// <exception cref="IOException">An I/O error occurs. </exception>

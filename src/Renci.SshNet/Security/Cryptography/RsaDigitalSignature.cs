@@ -45,7 +45,6 @@ namespace Renci.SshNet.Security.Cryptography
         public void Dispose()
         {
             Dispose(true);
-            GC.SuppressFinalize(this);
         }
 
         /// <summary>
@@ -68,15 +67,6 @@ namespace Renci.SshNet.Security.Cryptography
 
                 _isDisposed = true;
             }
-        }
-
-        /// <summary>
-        /// Releases unmanaged resources and performs other cleanup operations before the
-        /// <see cref="RsaDigitalSignature"/> is reclaimed by garbage collection.
-        /// </summary>
-        ~RsaDigitalSignature()
-        {
-            Dispose(false);
         }
 
         #endregion

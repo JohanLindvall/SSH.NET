@@ -2285,7 +2285,6 @@ namespace Renci.SshNet
         public void Dispose()
         {
             Dispose(true);
-            GC.SuppressFinalize(this);
         }
 
         /// <summary>
@@ -2355,15 +2354,6 @@ namespace Renci.SshNet
 
                 _disposed = true;
             }
-        }
-
-        /// <summary>
-        /// Releases unmanaged resources and performs other cleanup operations before the
-        /// <see cref="Session"/> is reclaimed by garbage collection.
-        /// </summary>
-        ~Session()
-        {
-            Dispose(false);
         }
 
 #endregion IDisposable implementation

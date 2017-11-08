@@ -289,7 +289,6 @@ namespace Renci.SshNet
         public void Dispose()
         {
             Dispose(true);
-            GC.SuppressFinalize(this);
         }
 
         /// <summary>
@@ -328,15 +327,6 @@ namespace Renci.SshNet
 
                 _disposed = true;
             }
-        }
-
-        /// <summary>
-        /// Releases unmanaged resources and performs other cleanup operations before the
-        /// <see cref="Shell"/> is reclaimed by garbage collection.
-        /// </summary>
-        ~Shell()
-        {
-            Dispose(false);
         }
 
         #endregion
